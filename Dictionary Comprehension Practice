@@ -1,0 +1,34 @@
+##
+# Summary - Dictionary Comprehension Practice
+# Architects - Hunter Hall
+# Developed by - Hunter Hall
+# Date - 10/19/2022
+# Initial Version - 0.1
+# Description - Dictionary comprehension practice examples
+#
+# Modified by:
+# Modified date:
+# Version -
+# Description:
+#
+##
+
+try:
+    values = {x: x * 2 for x in range(5)}
+    print(str(values) + "\n")
+except Exception as e:
+    print("Dictionary Comprehension.1 - Error Occured " + str(e))
+try:
+    age = {"John": 40, "Mike": 36, "Jerry": 34, "Jessica": 25, "Mark": 58, "Austin": 23, "Donna": 59}
+    agenew = {k:("Old" if v >= 50 else "Young") for k,v in age.items()}
+    print(str(agenew) + "\n")
+except Exception as e:
+    print("Dictionary Comprehension.2 - Error Occured " + str(e))
+try:
+    age = {"John": 40, "Mike": 36, "Jerry": 34, "Jessica": 25, "Mark": 55, "Austin": 23}
+    agenew = {k:v for k,v in age.items() if v < 30}
+    print(str(agenew) + "\n")
+except Exception as e:
+    print("Dictionary Comprehension.3 - Error Occured " + str(e))
+finally:
+    print("Dictionary Comprehension executed")
